@@ -4,31 +4,25 @@ This is a Flask-based REST API for translating text using the Argos Translate li
 
 ## Usage
 
-1. Start the Flask server:
+Send a POST request to the `/translate` endpoint with the following JSON payload:
 
-   ```
-   python app.py
-   ```
+```
+{
+    "text": "your text here",
+    "from_code": "source_language_code",
+    "to_code": "target_language_code"
+}
+```
 
-2. Send a POST request to the `/translate` endpoint with the following JSON payload:
-
-   ```
-   {
-       "text": "your text here",
-       "from_code": "source_language_code",
-       "to_code": "target_language_code"
-   }
-   ```
-
-   Replace `source_language_code` and `target_language_code` with the appropriate language codes.
+Replace `source_language_code` and `target_language_code` with the appropriate language codes.
 
 ## Example
 
 To translate "Hello, world!" from English (en) to Spanish (es):
 
-   ```
-   curl -X POST http://localhost:5000/translate -H "Content-Type: application/json" -d '{"text": "Hello, world!", "from_code": "en", "to_code": "es"}'
-   ```
+```
+curl -X POST http://localhost:5000/translate -H "Content-Type: application/json" -d '{"text": "Hello, world!", "from_code": "en", "to_code": "es"}'
+```
 
 ## Error Handling
 

@@ -31,7 +31,7 @@ curl -X POST http://localhost:5000/translate \
 ```
 
 Response:
-```json
+```
 {
   "translated_text": "¡Hola, mundo!"
 }

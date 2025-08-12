@@ -1,6 +1,6 @@
 # Translate REST API
 
-This is a Flask-based REST API for translating text using the Argos Translate library.
+This is a Flask-based REST API for translating text using the [Argos Translate library](https://github.com/argosopentech/argos-translate).
 
 ## Usage
 

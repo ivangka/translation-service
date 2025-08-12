@@ -21,7 +21,20 @@ Replace `source_language_code` and `target_language_code` with the appropriate l
 To translate "Hello, world!" from English (en) to Spanish (es):
 
 ```
-curl -X POST http://localhost:5000/translate -H "Content-Type: application/json" -d '{"text": "Hello, world!", "from_code": "en", "to_code": "es"}'
+curl -X POST http://localhost:5000/translate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "Hello, world!",
+    "from_code": "en",
+    "to_code": "es"
+  }'
+```
+
+Response:
+```json
+{
+  "translated_text": "¡Hola, mundo!"
+}
 ```
 
 ## Error Handling
